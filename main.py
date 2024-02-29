@@ -1,4 +1,12 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM,BitsAndBytesConfig
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
 auth_token = "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"
 
 
